@@ -1,0 +1,26 @@
+server:
+     port: 8085
+
+spring:
+  application:
+    name: msvalid
+  jackson:
+    serialization:
+     fail-on-empty-beans: false  
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    
+  datasource:
+    platform: postgres  
+    url: jdbc:postgresql://localhost:5432/valid
+    username: postgres
+    password: Alex1108$
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
